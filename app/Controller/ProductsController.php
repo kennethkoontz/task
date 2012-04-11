@@ -21,8 +21,11 @@ class ProductsController extends AppController {
 				$subtotal = $subtotal + $q[0]['Product']['price'];
 				array_push($results, $q);
 			}
-			$this->set('products', $results);
-			$this->set('subtotal', $subtotal);
+			$this->set('products', $results); 
+			$this->set('subtotal', $subtotal); 
+			$taxed = .0775 * $subtotal;
+			$this->set('taxes', number_format($taxed, 2));
+			$this->set('grandtotal', number_format($subtotal + $taxed, 2));
 		}
 	}
 }

@@ -17,4 +17,17 @@
 
 </table>
 
-<h4>Subtotal: $<?php echo $subtotal ?></h4>
+<table>
+<tr>
+  <td>Subtotal:</td>
+  <td>$<?php echo $subtotal ?></td>
+</tr>
+<tr>
+  <td>Taxes: <small>(@7.75%)</small></td>
+  <td>$<?php echo $taxes ?></td>
+</tr>
+<tr>
+  <td><h4>Grand Total:</h4></td>
+  <td>$<?php echo $grandtotal ?></td>
+</tr>
+</table>
